@@ -773,14 +773,15 @@
     });
 
     try {
-      const resp = await fetch(CONFIG.LEADS_ENDPOINT, {
+      const resp = await fetch(CONFIG.LEADS_ENDPOINT + '?t=' + Date.now(), {
         method: 'POST',
+        cache: 'no-store',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: dados.toString()
       });
       if (!resp.ok) throw new Error('http ' + resp.status);
       const r = await resp.json().catch(() => ({ estado: 'ok' }));
-      if (r.estado === 'erro') throw new Error('script');
+      if (r.estado !== 'ok') throw new Error('script ' + r.estado);
 
       const lang = document.documentElement.lang;
       if (typeof gtag === 'function') {
