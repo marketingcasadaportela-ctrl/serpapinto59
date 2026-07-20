@@ -2,6 +2,6 @@
   functions = "netlify/functions"
 
 [[redirects]]
-  from = "/lead"
+  from = "/sp59-envio"
   to = "/.netlify/functions/lead"
   status = 200
