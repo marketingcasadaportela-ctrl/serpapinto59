@@ -1,4 +1,4 @@
-const APPS_SCRIPT = 'https://script.google.com/macros/s/AKfycbyTbJn1JmENv-chmtgj3Wo8e1VvkKYGXEmjgwJslXWUcijEmFmdoNxqzYPgoTuTVke0/exec';
+const APPS_SCRIPT = 'https://script.google.com/macros/s/AKfycbyBX1TmG_AZ52-kJDdsCTYbF5hRGELPsysgFgZGjGce7CxzbBn99EUyn5KB9UfK_9Lo/exec';
 
 exports.handler = async (event) => {
   const cabecalhos = {
