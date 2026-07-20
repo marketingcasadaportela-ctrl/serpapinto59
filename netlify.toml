@@ -1,0 +1,7 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/lead"
+  to = "/.netlify/functions/lead"
+  status = 200
