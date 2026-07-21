@@ -250,6 +250,7 @@
   .campo.full{grid-column:1/-1}
   label{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;opacity:.85}
   input,select,textarea{font-family:var(--fonte);font-size:1rem;font-weight:300;color:var(--branco);
+    -webkit-user-select:text;user-select:text;-webkit-touch-callout:default;
     background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.3);padding:.85rem 1rem;transition:border .25s}
   input:focus,select:focus,textarea:focus{outline:none;border-color:var(--creme);background:rgba(255,255,255,.12)}
   select option{color:var(--carvao)}
@@ -264,6 +265,10 @@
   .form-msg.erro{border-color:#d99;color:#fdd}
   .contactos-diretos{margin-top:2.2rem;font-size:.95rem;opacity:.9}
   .contactos-diretos a{text-decoration:underline;text-underline-offset:3px}
+  .nota-custo{font-size:.72rem;opacity:.6;margin-top:.5rem;letter-spacing:.02em}
+  .nota-custo-footer{font-size:.72rem;opacity:.55}
+  .video-wrap{position:relative;width:100%;aspect-ratio:16/9;background:var(--creme)}
+  .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
   footer{background:var(--carvao);color:var(--creme);padding:3.4rem 0 2.6rem;font-size:.88rem}
   footer .wrap{display:flex;flex-wrap:wrap;gap:2.4rem;justify-content:space-between;align-items:center}
@@ -409,6 +414,25 @@
   <div class="carrossel" id="carrossel" tabindex="0" aria-label="Galeria de imagens do empreendimento"></div>
 </section>
 
+<!-- ============================================================
+     VÍDEO (preparado para o futuro)
+     Para ativar: retira os comentários abaixo e substitui
+     VIDEO_ID pelo ID do YouTube (ex: dQw4w9WgXcQ) ou troca o
+     iframe por um do Vimeo. A secção já está estilizada.
+     ============================================================
+<section id="video">
+  <div class="wrap">
+    <div class="reveal" style="max-width:60ch;margin-bottom:2.6rem">
+      <p class="eyebrow" data-i18n="vid_eyebrow">Vídeo</p>
+      <h2 data-i18n="vid_titulo">Conheça o Serpa Pinto 59</h2>
+    </div>
+    <div class="video-wrap reveal">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Serpa Pinto 59" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+-->
+
 <section id="fracoes" style="background:var(--creme)">
   <div class="wrap">
     <div class="reveal" style="max-width:62ch">
@@ -529,7 +553,7 @@
     </div>
 
     <form id="leadForm" novalidate>
-      <input type="text" name="empresa" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <input type="text" name="hp_control" tabindex="-1" autocomplete="new-password" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" data-lpignore="true" data-form-type="other">
       <div class="campo">
         <label for="nome" data-i18n="f_nome">Nome</label>
         <input id="nome" name="nome" type="text" required autocomplete="name">
@@ -554,10 +578,10 @@
         <label for="fracao" data-i18n="f_fracao">Fração de interesse</label>
         <select id="fracao" name="fracao">
           <option value="Indiferente" data-i18n="f_op0">Indiferente</option>
-          <option value="Fração A">Fração A · T3+1 Duplex</option>
-          <option value="Fração B">Fração B · T2 Duplex</option>
-          <option value="Fração I">Fração I · T1</option>
-          <option value="Fração L">Fração L · T1</option>
+          <option value="Fração A">Fração A · T3+1 Duplex — 1.450.000€</option>
+          <option value="Fração B">Fração B · T2 Duplex — 640.000€</option>
+          <option value="Fração I">Fração I · T1 — 280.000€</option>
+          <option value="Fração L">Fração L · T1 — 285.000€</option>
         </select>
       </div>
       <div class="campo">
@@ -574,6 +598,7 @@
     </form>
 
     <p class="contactos-diretos" data-i18n="ct_diretos">Prefere contacto direto? <a href="tel:+351910330640" onclick="evento('click_phone')">+351 910 330 640</a> · <a href="https://wa.me/351910330640" target="_blank" rel="noopener" onclick="evento('click_whatsapp')">WhatsApp</a> · <a href="mailto:mportela@casadaportela.pt" onclick="evento('click_email')">mportela@casadaportela.pt</a></p>
+    <p class="nota-custo" data-i18n="ct_custo">Chamada para rede móvel nacional.</p>
   </div>
 </section>
 
@@ -583,6 +608,7 @@
     <div class="contactos">
       <strong>Miguel Portela</strong><br>
       <a href="tel:+351910330640">+351 910 330 640</a><br>
+      <span class="nota-custo-footer" data-i18n="ft_custo">Chamada para rede móvel nacional</span><br>
       <a href="mailto:mportela@casadaportela.pt">mportela@casadaportela.pt</a>
     </div>
     <img class="logo-rp" src="assets/logorp.svg" alt="Residential Premium">
@@ -759,7 +785,7 @@
       assunto: assunto,
       fracao: form.fracao.value,
       mensagem: form.mensagem.value.trim(),
-      empresa: form.empresa.value,
+      hp_control: form.hp_control.value,
       idioma: document.documentElement.lang,
       origem: location.href,
       fracoes_vistas: [...fracoesVistas].join(', '),
@@ -906,6 +932,8 @@
       f_erro:"Please fill in the required fields and accept the privacy policy.",
       f_erro_rede:"Something went wrong. Please try again.",
       ct_diretos:"Prefer direct contact? <a href='tel:+351910330640' onclick=\"evento('click_phone')\">+351 910 330 640</a> · <a href='https://wa.me/351910330640' target='_blank' rel='noopener' onclick=\"evento('click_whatsapp')\">WhatsApp</a> · <a href='mailto:mportela@casadaportela.pt' onclick=\"evento('click_email')\">mportela@casadaportela.pt</a>",
+      ct_custo:"Call to national mobile network.",
+      ft_custo:"Call to national mobile network",
       bm_visita:"Book a visit",
       ck_texto:"We use Google and Meta cookies to measure the performance of our advertising campaigns. You can accept or decline — the site works the same either way.",
       ck_aceitar:"Accept",
