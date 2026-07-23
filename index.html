@@ -35,7 +35,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Serpa Pinto 59 | Apartamentos Novos no Porto — T1 a T3+1 Duplex</title>
-<meta name="description" content="Conheça o Serpa Pinto 59, empreendimento residencial contemporâneo no Porto. Apartamentos T1, T2 Duplex e T3+1 Duplex desde 280.000€. Apenas 4 frações disponíveis.">
+<meta name="description" content="Conheça o Serpa Pinto 59, empreendimento residencial contemporâneo no Porto. Apartamentos T1, T2 Duplex e T3+1 Duplex desde 280.000€. Venda em planta, conclusão prevista para 2028. Apenas 4 frações disponíveis.">
 <link rel="canonical" href="https://serpapinto59.casadaportela.pt/">
 <meta property="og:title" content="Serpa Pinto 59 | Apartamentos Novos no Porto">
 <meta property="og:description" content="19 residências no coração do Porto. T1 a T3+1 Duplex desde 280.000€. Apenas 4 frações disponíveis.">
@@ -78,7 +78,7 @@
       "@type": "ApartmentComplex",
       "@id": "https://serpapinto59.casadaportela.pt/#empreendimento",
       "name": "Serpa Pinto 59",
-      "description": "Empreendimento residencial contemporâneo com 19 residências, fachada em betão branco e jardins suspensos, no Porto. Tipologias T1, T2 Duplex e T3+1 Duplex.",
+      "description": "Empreendimento residencial contemporâneo com 19 residências, fachada em betão branco e jardins suspensos, no Porto. Tipologias T1, T2 Duplex e T3+1 Duplex. Início de construção em setembro de 2026, conclusão prevista para 2028.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua de Serpa Pinto, 59",
@@ -168,8 +168,9 @@
   .hero-inner{position:relative;z-index:2;padding-bottom:clamp(3rem,7vw,5.5rem);text-shadow:0 1px 20px rgba(40,46,35,.5)}
   .hero h1{font-size:clamp(2.2rem,5.2vw,4.2rem);max-width:15ch;margin-bottom:1rem;letter-spacing:.015em}
   .hero .sub{max-width:52ch;font-size:1.05rem;opacity:.94;margin-bottom:.6rem}
-  .hero .preco{font-size:1.25rem;font-weight:400;letter-spacing:.04em;color:var(--dourado);margin-bottom:2rem;
+  .hero .preco{font-size:1.25rem;font-weight:400;letter-spacing:.04em;color:var(--dourado);margin-bottom:.5rem;
     filter:brightness(1.25)}
+  .hero-prazos{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;opacity:.85;margin-bottom:2rem}
   .hero-acoes{display:flex;gap:1rem;flex-wrap:wrap;text-shadow:none}
   .hero .btn{color:var(--branco)}
   .hero-badge{position:absolute;z-index:2;top:7rem;right:clamp(1.25rem,4vw,2.5rem);writing-mode:vertical-rl;
@@ -219,6 +220,7 @@
   .disponibilidade .numeros b{font-weight:400;color:var(--verde-escuro)}
   .barra{flex:1;min-width:180px;max-width:340px;height:3px;background:rgba(91,108,82,.18);position:relative}
   .barra::after{content:'';position:absolute;inset:0;width:79%;background:var(--dourado)}
+  .fr-prazos{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dourado);margin-top:.4rem}
 
   /* Frações */
   .fracoes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.4rem}
@@ -338,6 +340,7 @@
     <h1 data-i18n="hero_titulo">Um edifício que respira</h1>
     <p class="sub" data-i18n="hero_sub">Apartamentos T1 a T3+1 Duplex no centro do Porto. Arquitectura contemporânea, jardins suspensos e apenas 4 frações disponíveis.</p>
     <p class="preco" data-i18n="hero_preco">Desde 280.000€</p>
+    <p class="hero-prazos" data-i18n="hero_prazos">Início de construção em setembro de 2026 · Conclusão prevista para 2028</p>
     <div class="hero-acoes">
       <a class="btn btn-cheio" href="#contacto" onclick="preSelect('','Agendar visita')" data-i18n="hero_cta1">Agendar visita</a>
       <a class="btn" href="#fracoes" data-i18n="hero_cta2">Conhecer as frações</a>
@@ -450,6 +453,7 @@
         <p class="numeros" data-i18n="fr_disp"><b>19</b> residências · <b>15</b> reservadas · <b>4</b> disponíveis</p>
         <div class="barra" role="img" aria-label="79% do empreendimento reservado"></div>
       </div>
+      <p class="fr-prazos" data-i18n="fr_prazos">Venda em planta · Início de construção em setembro de 2026 · Conclusão prevista para 2028</p>
     </div>
     <div class="fracoes-grid">
       <article class="card reveal" id="fracao-a">
@@ -546,6 +550,8 @@
       <details><summary data-i18n="faq_q5">Existe piscina?</summary><p data-i18n="faq_a5">Sim. A Fração A (T3+1 duplex) dispõe de piscina exterior privativa, integrada num logradouro de 503 m².</p></details>
       <details><summary data-i18n="faq_q6">Os apartamentos têm espaço exterior?</summary><p data-i18n="faq_a6">A Fração A tem 503 m² de logradouro privativo com piscina e a Fração B tem um terraço privativo de 28 m². Todas as frações beneficiam das floreiras integradas na fachada.</p></details>
       <details><summary data-i18n="faq_q7">Quantas residências tem o empreendimento?</summary><p data-i18n="faq_a7">O Serpa Pinto 59 é composto por 19 frações habitacionais, das quais apenas 4 permanecem disponíveis.</p></details>
+      <details><summary data-i18n="faq_q10">Quando começa a construção?</summary><p data-i18n="faq_a10">O início da construção do Serpa Pinto 59 está previsto para setembro de 2026.</p></details>
+      <details><summary data-i18n="faq_q11">Quando está prevista a conclusão?</summary><p data-i18n="faq_a11">A conclusão do empreendimento está prevista para 2028. As frações são comercializadas em planta, o que permite escolher entre as últimas unidades disponíveis.</p></details>
       <details><summary data-i18n="faq_q8">É possível visitar o empreendimento?</summary><p data-i18n="faq_a8">Sim. Pode agendar uma visita através do formulário do site, por telefone (+351 910 330 640) ou por WhatsApp, com acompanhamento da equipa comercial.</p></details>
       <details><summary data-i18n="faq_q9">Quem comercializa o Serpa Pinto 59?</summary><p data-i18n="faq_a9">A comercialização é assegurada pela Casa da Portela Imobiliária (AMI 10340), com acompanhamento especializado em todas as fases da aquisição.</p></details>
     </div>
@@ -865,6 +871,7 @@
       hero_titulo:"A building that breathes",
       hero_sub:"1 to 3+1-bedroom duplex apartments in central Porto. Contemporary architecture, hanging gardens and only 4 units remaining.",
       hero_preco:"From €280,000",
+      hero_prazos:"Construction starts September 2026 · Completion expected 2028",
       hero_cta1:"Book a visit",
       hero_cta2:"View the units",
       hero_cta3:"Download brochure",
@@ -900,6 +907,7 @@
       fr_eyebrow:"Available units",
       fr_titulo:"The final opportunities",
       fr_disp:"<b>19</b> residences · <b>15</b> reserved · <b>4</b> available",
+      fr_prazos:"Off-plan sale · Construction starts September 2026 · Completion expected 2028",
       fa_nome:"Unit A", fa_tipo:"3+1-bed Duplex · Garden & pool",
       fa_frase:"A residence with the scale of a villa. In central Porto.",
       fa_1:"332 m² interior · 835 m² total", fa_2:"503 m² of private outdoor space", fa_3:"Private pool", fa_4:"2 parking spaces + storage",
@@ -931,6 +939,10 @@
       faq_q7:"How many residences does the development have?",
       faq_a7:"Serpa Pinto 59 comprises 19 residential units, of which only 4 remain available.",
       faq_q8:"Can I visit the development?",
+      faq_q10:"When does construction start?",
+      faq_a10:"Construction of Serpa Pinto 59 is scheduled to start in September 2026.",
+      faq_q11:"When is completion expected?",
+      faq_a11:"Completion is expected in 2028. Units are sold off-plan, allowing buyers to choose from the last available residences.",
       faq_a8:"Yes. You can book a visit through the website form, by phone (+351 910 330 640) or via WhatsApp, with support from the sales team.",
       faq_q9:"Who is selling Serpa Pinto 59?",
       faq_a9:"Sales are handled by Casa da Portela Imobiliária (AMI 10340), with specialised support at every stage of the purchase.",
@@ -1030,6 +1042,8 @@
     { "@type": "Question", "name": "Existe piscina?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A Fração A (T3+1 duplex) dispõe de piscina exterior privativa, integrada num logradouro de 503 m²." } },
     { "@type": "Question", "name": "Os apartamentos têm espaço exterior?", "acceptedAnswer": { "@type": "Answer", "text": "A Fração A tem 503 m² de logradouro privativo com piscina e a Fração B tem um terraço privativo de 28 m². Todas as frações beneficiam das floreiras integradas na fachada." } },
     { "@type": "Question", "name": "Quantas residências tem o empreendimento?", "acceptedAnswer": { "@type": "Answer", "text": "O Serpa Pinto 59 é composto por 19 frações habitacionais, das quais apenas 4 permanecem disponíveis." } },
+    { "@type": "Question", "name": "Quando começa a construção?", "acceptedAnswer": { "@type": "Answer", "text": "O início da construção do Serpa Pinto 59 está previsto para setembro de 2026." } },
+    { "@type": "Question", "name": "Quando está prevista a conclusão?", "acceptedAnswer": { "@type": "Answer", "text": "A conclusão do empreendimento está prevista para 2028. As frações são comercializadas em planta, o que permite escolher entre as últimas unidades disponíveis." } },
     { "@type": "Question", "name": "É possível visitar o empreendimento?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Pode agendar uma visita através do formulário do site, por telefone (+351 910 330 640) ou por WhatsApp, com acompanhamento da equipa comercial." } },
     { "@type": "Question", "name": "Quem comercializa o Serpa Pinto 59?", "acceptedAnswer": { "@type": "Answer", "text": "A comercialização é assegurada pela Casa da Portela Imobiliária (AMI 10340), com acompanhamento especializado em todas as fases da aquisição." } }
   ]
