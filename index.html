@@ -224,11 +224,20 @@
   .disponibilidade .numeros b{font-weight:400;color:var(--verde-escuro)}
   .barra{flex:1;min-width:180px;max-width:340px;height:3px;background:rgba(91,108,82,.18);position:relative}
   .barra::after{content:'';position:absolute;inset:0;width:79%;background:var(--dourado)}
+<<<<<<< HEAD
+  .fr-prazos{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:1.8rem;padding:1rem 1.4rem;
+    background:var(--branco);border-left:3px solid var(--dourado);font-size:.92rem;line-height:1.5;color:var(--carvao)}
+  .fr-prazos strong{font-weight:500;font-size:.72rem;letter-spacing:.24em;white-space:nowrap;
+    text-transform:uppercase;color:var(--dourado)}
+  .fr-prazos > span{flex:1;min-width:min(100%,320px)}
+  .fr-prazos svg{flex-shrink:0}
+=======
   .fr-prazos{display:flex;gap:1.1rem;align-items:flex-start;margin-top:1.4rem;padding:1.1rem 1.3rem;
     background:var(--branco);border-left:3px solid var(--dourado);font-size:.92rem;line-height:1.6;color:var(--carvao)}
   .fr-prazos strong{display:block;font-weight:500;font-size:.72rem;letter-spacing:.24em;
     text-transform:uppercase;color:var(--dourado);margin-bottom:.35rem}
   .fr-prazos svg{flex-shrink:0;margin-top:.15rem}
+>>>>>>> 5972769b8f3b9f98e5a742d4e8edb8f0ce74d634
 
   /* Frações */
   .fracoes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.4rem}
@@ -463,10 +472,18 @@
         <p class="numeros" data-i18n="fr_disp"><b>19</b> residências · <b>15</b> reservadas · <b>4</b> disponíveis</p>
         <div class="barra" role="img" aria-label="79% do empreendimento reservado"></div>
       </div>
+<<<<<<< HEAD
+    </div>
+    <div class="fr-prazos reveal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bba290" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+      <strong data-i18n="fr_prazos_t">Venda em planta</strong>
+      <span data-i18n="fr_prazos">Início de construção previsto para <b>setembro de 2026</b> · Conclusão prevista para <b>2028</b></span>
+=======
       <div class="fr-prazos">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bba290" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
         <span><strong data-i18n="fr_prazos_t">Venda em planta</strong><span data-i18n="fr_prazos">Início de construção previsto para <b>setembro de 2026</b> · Conclusão prevista para <b>2028</b></span></span>
       </div>
+>>>>>>> 5972769b8f3b9f98e5a742d4e8edb8f0ce74d634
     </div>
     <div class="fracoes-grid">
       <article class="card reveal" id="fracao-a">
@@ -558,14 +575,13 @@
     <div style="max-width:760px">
       <details><summary data-i18n="faq_q1">Onde fica o Serpa Pinto 59?</summary><p data-i18n="faq_a1">O Serpa Pinto 59 está localizado na Rua de Serpa Pinto, 59, no Porto, perto da Casa da Música, da Rotunda da Boavista e da Avenida da Boavista, com metro a uma curta caminhada.</p></details>
       <details><summary data-i18n="faq_q2">Que tipologias estão disponíveis?</summary><p data-i18n="faq_a2">Estão disponíveis 4 frações: um T3+1 duplex com jardim e piscina, um T2 duplex com terraço e garagem, e dois T1 voltados à fachada principal (3.º e 4.º piso).</p></details>
+      <details><summary data-i18n="faq_q10">Quando começa a construção?</summary><p data-i18n="faq_a10">O início da construção do Serpa Pinto 59 está previsto para setembro de 2026.</p></details>
+      <details><summary data-i18n="faq_q11">Quando está prevista a conclusão?</summary><p data-i18n="faq_a11">A conclusão do empreendimento está prevista para 2028. As frações são comercializadas em planta, o que permite escolher entre as últimas unidades disponíveis.</p></details>
       <details><summary data-i18n="faq_q3">Qual o preço dos apartamentos?</summary><p data-i18n="faq_a3">As frações disponíveis têm preços desde 280.000€ (T1) até 1.450.000€ (T3+1 duplex com jardim e piscina).</p></details>
       <details><summary data-i18n="faq_q4">O empreendimento tem garagem?</summary><p data-i18n="faq_a4">A Fração A inclui 2 lugares de garagem e a Fração B tem garagem individual com acesso direto ao apartamento. Todas as frações incluem arrumos.</p></details>
       <details><summary data-i18n="faq_q5">Existe piscina?</summary><p data-i18n="faq_a5">Sim. A Fração A (T3+1 duplex) dispõe de piscina exterior privativa, integrada num logradouro de 503 m².</p></details>
       <details><summary data-i18n="faq_q6">Os apartamentos têm espaço exterior?</summary><p data-i18n="faq_a6">A Fração A tem 503 m² de logradouro privativo com piscina e a Fração B tem um terraço privativo de 28 m². Todas as frações beneficiam das floreiras integradas na fachada.</p></details>
       <details><summary data-i18n="faq_q7">Quantas residências tem o empreendimento?</summary><p data-i18n="faq_a7">O Serpa Pinto 59 é composto por 19 frações habitacionais, das quais apenas 4 permanecem disponíveis.</p></details>
-      <details><summary data-i18n="faq_q10">Quando começa a construção?</summary><p data-i18n="faq_a10">O início da construção do Serpa Pinto 59 está previsto para setembro de 2026.</p></details>
-      <details><summary data-i18n="faq_q11">Quando está prevista a conclusão?</summary><p data-i18n="faq_a11">A conclusão do empreendimento está prevista para 2028. As frações são comercializadas em planta, o que permite escolher entre as últimas unidades disponíveis.</p></details>
-      <details><summary data-i18n="faq_q8">É possível visitar o empreendimento?</summary><p data-i18n="faq_a8">Sim. Pode agendar uma visita através do formulário do site, por telefone (+351 910 330 640) ou por WhatsApp, com acompanhamento da equipa comercial.</p></details>
       <details><summary data-i18n="faq_q9">Quem comercializa o Serpa Pinto 59?</summary><p data-i18n="faq_a9">A comercialização é assegurada pela Casa da Portela Imobiliária (AMI 10340), com acompanhamento especializado em todas as fases da aquisição.</p></details>
     </div>
   </div>
@@ -954,12 +970,10 @@
       faq_a6:"Unit A has 503 m² of private grounds with a pool and Unit B has a 28 m² private terrace. All units benefit from the planters integrated into the façade.",
       faq_q7:"How many residences does the development have?",
       faq_a7:"Serpa Pinto 59 comprises 19 residential units, of which only 4 remain available.",
-      faq_q8:"Can I visit the development?",
       faq_q10:"When does construction start?",
       faq_a10:"Construction of Serpa Pinto 59 is scheduled to start in September 2026.",
       faq_q11:"When is completion expected?",
       faq_a11:"Completion is expected in 2028. Units are sold off-plan, allowing buyers to choose from the last available residences.",
-      faq_a8:"Yes. You can book a visit through the website form, by phone (+351 910 330 640) or via WhatsApp, with support from the sales team.",
       faq_q9:"Who is selling Serpa Pinto 59?",
       faq_a9:"Sales are handled by Casa da Portela Imobiliária (AMI 10340), with specialised support at every stage of the purchase.",
       ct_eyebrow:"Brochure & contact",
@@ -1060,7 +1074,6 @@
     { "@type": "Question", "name": "Quantas residências tem o empreendimento?", "acceptedAnswer": { "@type": "Answer", "text": "O Serpa Pinto 59 é composto por 19 frações habitacionais, das quais apenas 4 permanecem disponíveis." } },
     { "@type": "Question", "name": "Quando começa a construção?", "acceptedAnswer": { "@type": "Answer", "text": "O início da construção do Serpa Pinto 59 está previsto para setembro de 2026." } },
     { "@type": "Question", "name": "Quando está prevista a conclusão?", "acceptedAnswer": { "@type": "Answer", "text": "A conclusão do empreendimento está prevista para 2028. As frações são comercializadas em planta, o que permite escolher entre as últimas unidades disponíveis." } },
-    { "@type": "Question", "name": "É possível visitar o empreendimento?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Pode agendar uma visita através do formulário do site, por telefone (+351 910 330 640) ou por WhatsApp, com acompanhamento da equipa comercial." } },
     { "@type": "Question", "name": "Quem comercializa o Serpa Pinto 59?", "acceptedAnswer": { "@type": "Answer", "text": "A comercialização é assegurada pela Casa da Portela Imobiliária (AMI 10340), com acompanhamento especializado em todas as fases da aquisição." } }
   ]
 }
