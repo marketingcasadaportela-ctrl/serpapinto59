@@ -353,7 +353,7 @@
     <p class="preco" data-i18n="hero_preco">Desde 280.000€</p>
     <p class="hero-prazos" data-i18n="hero_prazos">Venda em planta · Construção inicia <b>setembro 2026</b> · Conclusão <b>2028</b></p>
     <div class="hero-acoes">
-      <a class="btn btn-cheio" href="#contacto" onclick="preSelect('','Agendar visita')" data-i18n="hero_cta1">Agendar visita</a>
+      <a class="btn btn-cheio" href="#contacto" onclick="preSelect('','Agendar reunião')" data-i18n="hero_cta1">Agendar reunião</a>
       <a class="btn" href="#fracoes" data-i18n="hero_cta2">Conhecer as frações</a>
       <a class="btn" href="#contacto" onclick="preSelect('','Descarregar brochura')" data-i18n="hero_cta3">Descarregar brochura</a>
     </div>
@@ -485,7 +485,7 @@
           </ul>
           <p class="preco">1.450.000€</p>
           <div class="acoes">
-            <a class="btn" href="#contacto" onclick="preSelect('Fração A','Agendar visita')" data-i18n="card_visita">Agendar visita</a>
+            <a class="btn" href="#contacto" onclick="preSelect('Fração A','Agendar reunião')" data-i18n="card_visita">Agendar reunião</a>
             <a class="btn" href="#contacto" onclick="preSelect('Fração A','Pedir informações')" data-i18n="card_cta">Pedir informações</a>
           </div>
         </div>
@@ -504,7 +504,7 @@
           </ul>
           <p class="preco">640.000€</p>
           <div class="acoes">
-            <a class="btn" href="#contacto" onclick="preSelect('Fração B','Agendar visita')" data-i18n="card_visita2">Agendar visita</a>
+            <a class="btn" href="#contacto" onclick="preSelect('Fração B','Agendar reunião')" data-i18n="card_visita2">Agendar reunião</a>
             <a class="btn" href="#contacto" onclick="preSelect('Fração B','Pedir informações')" data-i18n="card_cta2">Pedir informações</a>
           </div>
         </div>
@@ -523,7 +523,7 @@
           </ul>
           <p class="preco">280.000€</p>
           <div class="acoes">
-            <a class="btn" href="#contacto" onclick="preSelect('Fração I','Agendar visita')" data-i18n="card_visita3">Agendar visita</a>
+            <a class="btn" href="#contacto" onclick="preSelect('Fração I','Agendar reunião')" data-i18n="card_visita3">Agendar reunião</a>
             <a class="btn" href="#contacto" onclick="preSelect('Fração I','Pedir informações')" data-i18n="card_cta3">Pedir informações</a>
           </div>
         </div>
@@ -542,7 +542,7 @@
           </ul>
           <p class="preco">285.000€</p>
           <div class="acoes">
-            <a class="btn" href="#contacto" onclick="preSelect('Fração L','Agendar visita')" data-i18n="card_visita4">Agendar visita</a>
+            <a class="btn" href="#contacto" onclick="preSelect('Fração L','Agendar reunião')" data-i18n="card_visita4">Agendar reunião</a>
             <a class="btn" href="#contacto" onclick="preSelect('Fração L','Pedir informações')" data-i18n="card_cta4">Pedir informações</a>
           </div>
         </div>
@@ -577,7 +577,7 @@
     <div class="reveal" style="max-width:62ch">
       <p class="eyebrow" data-i18n="ct_eyebrow">Brochura & contacto</p>
       <h2 data-i18n="ct_titulo">Fale connosco</h2>
-      <p data-i18n="ct_p1">Descarregue a brochura completa, peça informações ou agende uma visita — a equipa comercial responde com brevidade.</p>
+      <p data-i18n="ct_p1">Descarregue a brochura completa, peça informações ou agende uma reunião — a equipa comercial responde com brevidade.</p>
       <p class="ct-prazos"><span data-i18n="ct_prazos">Empreendimento em venda em planta · Construção inicia em setembro de 2026 · Conclusão prevista para 2028</span></p>
     </div>
 
@@ -600,7 +600,7 @@
         <select id="assunto" name="assunto">
           <option value="Descarregar brochura" data-i18n="f_as1">Descarregar a brochura</option>
           <option value="Pedir informações" data-i18n="f_as2">Pedir informações</option>
-          <option value="Agendar visita" data-i18n="f_as3">Agendar uma visita</option>
+          <option value="Agendar reunião" data-i18n="f_as3">Agendar uma reunião</option>
         </select>
       </div>
       <div class="campo">
@@ -656,7 +656,7 @@
 </footer>
 
 <div class="barra-mobile">
-  <a href="#contacto" onclick="preSelect('','Agendar visita')" data-i18n="bm_visita">Agendar visita</a>
+  <a href="#contacto" onclick="preSelect('','Agendar reunião')" data-i18n="bm_visita">Agendar reunião</a>
   <a href="https://wa.me/351910330640" target="_blank" rel="noopener" onclick="evento('click_whatsapp')">WhatsApp</a>
 </div>
 
@@ -860,7 +860,7 @@
         document.body.appendChild(a); a.click(); a.remove();
         ok.textContent = T[lang].f_ok_brochura;
         evento('download_brochure', { fraction: form.fracao.value });
-      } else if (assunto === 'Agendar visita') {
+      } else if (assunto === 'Agendar reunião') {
         ok.textContent = T[lang].f_ok_visita;
         evento('schedule_visit', { fraction: form.fracao.value });
       } else {
@@ -887,7 +887,7 @@
       hero_sub:"1 to 3+1-bedroom duplex apartments in central Porto. Contemporary architecture, hanging gardens and only 4 units remaining.",
       hero_preco:"From €280,000",
       hero_prazos:"Off-plan sale · Construction starts <b>September 2026</b> · Completion <b>2028</b>",
-      hero_cta1:"Book a visit",
+      hero_cta1:"Book a meeting",
       hero_cta2:"View the units",
       hero_cta3:"Download brochure",
       man_eyebrow:"The project",
@@ -937,7 +937,7 @@
       fl_nome:"Unit L", fl_tipo:"1-bed · 4th floor, front",
       fl_frase:"On an upper floor, with added privacy and open city views.",
       fl_1:"52 m² gross area", fl_2:"Open views and privacy", fl_3:"Optional kitchen peninsula", fl_4:"Storage",
-      card_visita:"Book a visit", card_visita2:"Book a visit", card_visita3:"Book a visit", card_visita4:"Book a visit",
+      card_visita:"Book a meeting", card_visita2:"Book a meeting", card_visita3:"Book a meeting", card_visita4:"Book a meeting",
       card_cta:"Request details", card_cta2:"Request details", card_cta3:"Request details", card_cta4:"Request details",
       faq_eyebrow:"Frequently asked questions",
       faq_titulo:"Everything you need to know about Serpa Pinto 59",
@@ -963,10 +963,10 @@
       faq_a9:"Sales are handled by Casa da Portela Imobiliária (AMI 10340), with specialised support at every stage of the purchase.",
       ct_eyebrow:"Brochure & contact",
       ct_titulo:"Get in touch",
-      ct_p1:"Download the full brochure, request details or book a visit — our sales team replies promptly.",
+      ct_p1:"Download the full brochure, request details or book a meeting — our sales team replies promptly.",
       f_nome:"Name", f_email:"Email", f_tel:"Phone",
       f_assunto:"I would like to",
-      f_as1:"Download the brochure", f_as2:"Request details", f_as3:"Book a visit",
+      f_as1:"Download the brochure", f_as2:"Request details", f_as3:"Book a meeting",
       f_fracao:"Unit of interest", f_op0:"No preference",
       f_pref:"How would you prefer to be contacted?",
       f_pref0:"No preference", f_pref1:"Phone", f_pref2:"Email", f_pref3:"WhatsApp",
@@ -975,13 +975,13 @@
       f_enviar:"Send",
       f_ok_brochura:"Thank you! Your brochure download has started. Our sales team will be in touch shortly.",
       f_ok_info:"Thank you! Our sales team will reply shortly with the requested details.",
-      f_ok_visita:"Thank you! Our sales team will contact you shortly to confirm your visit.",
+      f_ok_visita:"Thank you! Our sales team will contact you shortly to confirm your meeting.",
       f_erro:"Please fill in the required fields and accept the privacy policy.",
       f_erro_rede:"Something went wrong. Please try again.",
       ct_diretos:"Prefer direct contact? <a href='tel:+351910330640' onclick=\"evento('click_phone')\">+351 910 330 640</a> · <a href='https://wa.me/351910330640' target='_blank' rel='noopener' onclick=\"evento('click_whatsapp')\">WhatsApp</a> · <a href='mailto:mportela@casadaportela.pt' onclick=\"evento('click_email')\">mportela@casadaportela.pt</a>",
       ct_custo:"Call to national mobile network.",
       ft_custo:"Call to national mobile network",
-      bm_visita:"Book a visit",
+      bm_visita:"Book a meeting",
       ck_texto:"We use Google and Meta cookies to measure the performance of our advertising campaigns. You can accept or decline — the site works the same either way.",
       ck_aceitar:"Accept",
       ck_recusar:"Decline",
@@ -994,7 +994,7 @@
   T.pt.f_erro_rede = 'Ocorreu um erro. Tente novamente.';
   T.pt.f_ok_brochura = 'Obrigado! O download da brochura começou. A equipa comercial entrará em contacto brevemente.';
   T.pt.f_ok_info = 'Obrigado! A equipa comercial responderá brevemente com a informação pedida.';
-  T.pt.f_ok_visita = 'Obrigado! A equipa comercial entrará em contacto brevemente para confirmar a sua visita.';
+  T.pt.f_ok_visita = 'Obrigado! A equipa comercial entrará em contacto brevemente para confirmar a sua reunião.';
 
   function setLang(l){
     document.documentElement.lang = l;
