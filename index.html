@@ -249,6 +249,22 @@
   .card .btn{color:var(--verde-escuro);font-size:.6rem;padding:.55rem .9rem;letter-spacing:.14em}
 
   /* FAQ */
+  /* Plano de pagamentos */
+  .plano{list-style:none;margin:2.6rem 0 0;max-width:760px}
+  .plano li{display:flex;gap:1.6rem;align-items:baseline;padding:1.1rem 0;border-bottom:1px solid var(--linha);position:relative}
+  .plano li:first-child{border-top:1px solid var(--linha)}
+  .plano .pct{flex-shrink:0;width:64px;font-size:1.25rem;font-weight:400;color:var(--dourado);letter-spacing:.02em}
+  .plano .etapa{display:flex;flex-direction:column;gap:.15rem}
+  .plano .etapa strong{font-weight:400;font-size:1.02rem;color:var(--carvao)}
+  .plano .etapa span{font-size:.86rem;color:rgba(58,56,51,.7);line-height:1.55}
+  .plano li.final .pct{font-size:1.5rem;color:var(--verde-escuro)}
+  .plano li.final .etapa strong{font-weight:500}
+  .plano-nota{margin-top:1.6rem;font-size:.84rem;color:rgba(58,56,51,.65);max-width:66ch;line-height:1.6}
+  @media(max-width:560px){
+    .plano li{gap:1rem}
+    .plano .pct{width:52px;font-size:1.1rem}
+  }
+
   #faq details{border-bottom:1px solid var(--linha);padding:1.1rem 0}
   #faq summary{cursor:pointer;font-weight:400;font-size:1.02rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
   #faq summary::-webkit-details-marker{display:none}
@@ -547,6 +563,45 @@
         </div>
       </article>
     </div>
+  </div>
+</section>
+
+<section id="pagamento">
+  <div class="wrap">
+    <div class="reveal" style="max-width:62ch">
+      <p class="eyebrow" data-i18n="pg_eyebrow">Condições de pagamento</p>
+      <h2 data-i18n="pg_titulo">Um plano faseado, acompanhado da obra</h2>
+      <p data-i18n="pg_intro">O pagamento é escalonado ao longo da construção, com cada tranche associada a uma etapa concreta do empreendimento.</p>
+    </div>
+
+    <ol class="plano reveal">
+      <li>
+        <span class="pct">10%</span>
+        <span class="etapa"><strong data-i18n="pg_1t">Assinatura do CPCV</strong><span data-i18n="pg_1d">Contrato-promessa de compra e venda</span></span>
+      </li>
+      <li>
+        <span class="pct">10%</span>
+        <span class="etapa"><strong data-i18n="pg_2t">Conclusão da laje do rés-do-chão</strong><span data-i18n="pg_2d">Se, à data da compra, a laje já estiver concluída, aplica-se o prazo de 90 dias</span></span>
+      </li>
+      <li>
+        <span class="pct">10%</span>
+        <span class="etapa"><strong data-i18n="pg_3t">Início da laje de cobertura</strong></span>
+      </li>
+      <li>
+        <span class="pct">10%</span>
+        <span class="etapa"><strong data-i18n="pg_4t">Fecho de alvenarias</strong></span>
+      </li>
+      <li>
+        <span class="pct">10%</span>
+        <span class="etapa"><strong data-i18n="pg_5t">Conclusão da caixilharia</strong></span>
+      </li>
+      <li class="final">
+        <span class="pct">50%</span>
+        <span class="etapa"><strong data-i18n="pg_6t">Escritura</strong><span data-i18n="pg_6d">Remanescente na celebração da escritura pública</span></span>
+      </li>
+    </ol>
+
+    <p class="plano-nota reveal" data-i18n="pg_nota">Entre cada pagamento deve mediar um intervalo mínimo de 90 dias. Condições sujeitas a confirmação em sede de contrato.</p>
   </div>
 </section>
 
@@ -938,6 +993,16 @@
       fl_1:"52 m² gross area", fl_2:"Open views and privacy", fl_3:"Optional kitchen peninsula", fl_4:"Storage",
       card_visita:"Book a meeting", card_visita2:"Book a meeting", card_visita3:"Book a meeting", card_visita4:"Book a meeting",
       card_cta:"Request details", card_cta2:"Request details", card_cta3:"Request details", card_cta4:"Request details",
+      pg_eyebrow:"Payment terms",
+      pg_titulo:"A phased plan, aligned with construction",
+      pg_intro:"Payment is staged throughout construction, with each instalment tied to a specific milestone of the development.",
+      pg_1t:"Signing of the promissory contract (CPCV)", pg_1d:"Promissory purchase and sale agreement",
+      pg_2t:"Completion of the ground-floor slab", pg_2d:"If the slab is already complete at the time of purchase, the 90-day term applies",
+      pg_3t:"Start of the roof slab",
+      pg_4t:"Completion of masonry",
+      pg_5t:"Completion of window frames",
+      pg_6t:"Deed", pg_6d:"Balance payable upon signing of the public deed",
+      pg_nota:"A minimum interval of 90 days must elapse between payments. Terms subject to confirmation in the contract.",
       faq_eyebrow:"Frequently asked questions",
       faq_titulo:"Everything you need to know about Serpa Pinto 59",
       faq_q1:"Where is Serpa Pinto 59?",
