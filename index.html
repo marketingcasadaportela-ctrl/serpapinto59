@@ -35,10 +35,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Serpa Pinto 59 | Apartamentos Novos no Porto — T1 a T3+1 Duplex</title>
-<meta name="description" content="Conheça o Serpa Pinto 59, empreendimento residencial contemporâneo no Porto. Apartamentos T1, T2 e T3+1 Duplex desde 280.000€. Venda em planta, conclusão prevista para 2028. Apenas 4 frações disponíveis.">
+<meta name="description" content="Conheça o Serpa Pinto 59, empreendimento residencial contemporâneo no Porto. Apartamentos T1, T2 e T3+1 Duplex desde 280.000€. Venda em planta, conclusão prevista para 2028. Apenas 3 frações disponíveis.">
 <link rel="canonical" href="https://serpapinto59.casadaportela.pt/">
 <meta property="og:title" content="Serpa Pinto 59 | Apartamentos Novos no Porto">
-<meta property="og:description" content="19 residências no coração do Porto. T1 a T3+1 Duplex desde 280.000€. Apenas 4 frações disponíveis.">
+<meta property="og:description" content="19 residências no coração do Porto. T1 a T3+1 Duplex desde 280.000€. Apenas 3 frações disponíveis.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -109,7 +109,7 @@
           "@type": "Accommodation",
           "name": "Fração L — T1, 4.º Piso Frente",
           "floorSize": { "@type": "QuantitativeValue", "value": 52, "unitCode": "MTK" },
-          "offers": { "@type": "Offer", "price": 285000, "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+          "offers": { "@type": "Offer", "price": 285000, "priceCurrency": "EUR", "availability": "https://schema.org/SoldOut" }
         }
       ]
     }
@@ -222,7 +222,7 @@
   .disponibilidade .numeros{font-size:.92rem;letter-spacing:.04em}
   .disponibilidade .numeros b{font-weight:400;color:var(--verde-escuro)}
   .barra{flex:1;min-width:180px;max-width:340px;height:3px;background:rgba(91,108,82,.18);position:relative}
-  .barra::after{content:'';position:absolute;inset:0;width:79%;background:var(--dourado)}
+  .barra::after{content:'';position:absolute;inset:0;width:84%;background:var(--dourado)}
   .fr-prazos{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:1.8rem;padding:1rem 1.4rem;
     background:var(--branco);border-left:3px solid var(--dourado);font-size:.92rem;line-height:1.5;color:var(--carvao)}
   .fr-prazos strong{font-weight:500;font-size:.72rem;letter-spacing:.24em;white-space:nowrap;
@@ -237,7 +237,7 @@
   .card{background:var(--branco);border:1px solid var(--linha);overflow:hidden;display:flex;flex-direction:column;
     transition:transform .3s,box-shadow .3s}
   .card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(58,56,51,.12)}
-  .card .foto{aspect-ratio:4/3}
+  .card .foto{aspect-ratio:4/3;position:relative}
   .card-body{padding:1.2rem 1.1rem 1.3rem;display:flex;flex-direction:column;flex:1}
   .card h3{font-size:1.15rem;margin-bottom:.15rem}
   .card .tipo{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dourado);font-weight:500;margin-bottom:.7rem;min-height:2.1em}
@@ -247,6 +247,13 @@
   .card .preco{font-size:1.05rem;font-weight:400;letter-spacing:.03em;color:var(--verde-escuro);margin-bottom:1rem}
   .card .acoes{display:flex;gap:.5rem;flex-wrap:wrap}
   .card .btn{color:var(--verde-escuro);font-size:.6rem;padding:.55rem .9rem;letter-spacing:.14em}
+  .card.reservada{opacity:.82}
+  .card.reservada .foto{filter:grayscale(.5) brightness(.97)}
+  .card.reservada .preco{color:rgba(58,56,51,.42);text-decoration:line-through}
+  .tag-reservada{position:absolute;top:.9rem;left:.9rem;z-index:2;background:var(--carvao);color:var(--creme);
+    font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;padding:.42rem .82rem}
+  .estado-reservada{display:inline-block;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+    font-weight:500;color:var(--carvao);border:1px solid var(--linha);background:rgba(58,56,51,.05);padding:.55rem .95rem}
 
   /* FAQ */
   /* Plano de pagamentos */
@@ -288,6 +295,24 @@
     color:var(--dourado);font-weight:500}
 
   .plano-nota{margin-top:1.8rem;font-size:.82rem;color:rgba(58,56,51,.6);max-width:60ch;line-height:1.6}
+
+  /* Timeline horizontal — computador */
+  @media(min-width:860px){
+    .cronograma{display:flex;align-items:flex-start;max-width:none;margin:3rem 0 0}
+    .cronograma li:not(.intervalo){flex:1 1 0;min-width:0;gap:0;padding:0 .55rem;
+      display:flex;flex-direction:column;align-items:center;text-align:center}
+    .cronograma li:not(.intervalo)::before,
+    .cronograma li.final::before{display:none}
+    .cronograma .pct{order:1;width:auto;height:1.6rem;line-height:1.6rem;margin:0 0 .9rem;font-size:1.1rem}
+    .cronograma li.final .pct{font-size:1.35rem;line-height:1.6rem}
+    .cronograma .marco{order:2;position:relative;left:auto;top:auto;margin:0 0 1.1rem;z-index:1}
+    .cronograma li.final .marco{left:auto;top:auto}
+    .cronograma li:not(.intervalo):not(:last-child)::after{content:'';position:absolute;
+      top:calc(1.6rem + .9rem + .34rem);left:50%;width:100%;height:1px;background:var(--linha);z-index:0}
+    .cronograma .etapa{order:3;align-items:center;text-align:center;padding-bottom:0}
+    .cronograma .etapa strong{font-size:.92rem}
+    .cronograma .etapa span{font-size:.74rem;line-height:1.45;max-width:22ch;margin:0 auto}
+  }
 
   @media(max-width:560px){
     .pg-resumo{flex-direction:column}
@@ -395,7 +420,7 @@
   <div class="wrap hero-inner">
     <p class="eyebrow" data-i18n="hero_eyebrow">Novo empreendimento residencial · Porto</p>
     <h1 data-i18n="hero_titulo">Um edifício que respira</h1>
-    <p class="sub" data-i18n="hero_sub">Apartamentos T1 a T3+1 Duplex no centro do Porto. Arquitectura contemporânea, jardins suspensos e apenas 4 frações disponíveis.</p>
+    <p class="sub" data-i18n="hero_sub">Apartamentos T1 a T3+1 Duplex no centro do Porto. Arquitectura contemporânea, jardins suspensos e apenas 3 frações disponíveis.</p>
     <p class="preco" data-i18n="hero_preco">Desde 280.000€</p>
     <p class="hero-prazos" data-i18n="hero_prazos">Venda em planta · Construção inicia <b>setembro 2026</b> · Conclusão <b>2028</b></p>
     <div class="hero-acoes">
@@ -507,8 +532,8 @@
       <p class="eyebrow" data-i18n="fr_eyebrow">Frações disponíveis</p>
       <h2 data-i18n="fr_titulo">As últimas oportunidades</h2>
       <div class="disponibilidade">
-        <p class="numeros" data-i18n="fr_disp"><b>19</b> residências · <b>15</b> reservadas · <b>4</b> disponíveis</p>
-        <div class="barra" role="img" aria-label="79% do empreendimento reservado"></div>
+        <p class="numeros" data-i18n="fr_disp"><b>19</b> residências · <b>16</b> reservadas · <b>3</b> disponíveis</p>
+        <div class="barra" role="img" aria-label="84% do empreendimento reservado"></div>
       </div>
     </div>
     <div class="fr-prazos reveal">
@@ -574,8 +599,10 @@
           </div>
         </div>
       </article>
-      <article class="card reveal" id="fracao-l">
-        <div class="foto" data-img="fracaoL" role="img" aria-label="Sala da Fração L com vistas desafogadas"></div>
+      <article class="card reveal reservada" id="fracao-l">
+        <div class="foto" data-img="fracaoL" role="img" aria-label="Sala da Fração L com vistas desafogadas">
+          <span class="tag-reservada" data-i18n="tag_reservada">Reservado</span>
+        </div>
         <div class="card-body">
           <h3 data-i18n="fl_nome">Fração L</h3>
           <p class="tipo" data-i18n="fl_tipo">T1 · 4.º Piso Frente</p>
@@ -588,8 +615,7 @@
           </ul>
           <p class="preco">285.000€</p>
           <div class="acoes">
-            <a class="btn" href="#contacto" onclick="preSelect('Fração L','Agendar reunião')" data-i18n="card_visita4">Agendar reunião</a>
-            <a class="btn" href="#contacto" onclick="preSelect('Fração L','Pedir informações')" data-i18n="card_cta4">Pedir informações</a>
+            <span class="estado-reservada" data-i18n="fl_reservada">Reservado</span>
           </div>
         </div>
       </article>
@@ -632,34 +658,38 @@
           <span data-i18n="pg_1d">Contrato-promessa de compra e venda</span>
         </span>
       </li>
-      <li class="intervalo"><span data-i18n="pg_int1">mín. 90 dias</span></li>
       <li>
         <span class="marco"></span>
         <span class="pct">10%</span>
         <span class="etapa">
           <strong data-i18n="pg_2t">Conclusão da laje do rés-do-chão</strong>
-          <span data-i18n="pg_2d">Se, à data da compra, a laje já estiver concluída, aplica-se igualmente o prazo de 90 dias</span>
+          <span data-i18n="pg_2d">1.º reforço de sinal · a 90 dias do CPCV</span>
         </span>
       </li>
-      <li class="intervalo"><span data-i18n="pg_int2">mín. 90 dias</span></li>
       <li>
         <span class="marco"></span>
         <span class="pct">10%</span>
-        <span class="etapa"><strong data-i18n="pg_3t">Início da laje de cobertura</strong></span>
+        <span class="etapa">
+          <strong data-i18n="pg_3t">Início da laje de cobertura</strong>
+          <span data-i18n="pg_3d">2.º reforço de sinal · a 180 dias do CPCV</span>
+        </span>
       </li>
-      <li class="intervalo"><span data-i18n="pg_int3">mín. 90 dias</span></li>
       <li>
         <span class="marco"></span>
         <span class="pct">10%</span>
-        <span class="etapa"><strong data-i18n="pg_4t">Fecho de alvenarias</strong></span>
+        <span class="etapa">
+          <strong data-i18n="pg_4t">Conclusão das alvenarias</strong>
+          <span data-i18n="pg_4d">3.º reforço de sinal · a 270 dias do CPCV</span>
+        </span>
       </li>
-      <li class="intervalo"><span data-i18n="pg_int4">mín. 90 dias</span></li>
       <li>
         <span class="marco"></span>
         <span class="pct">10%</span>
-        <span class="etapa"><strong data-i18n="pg_5t">Conclusão da caixilharia</strong></span>
+        <span class="etapa">
+          <strong data-i18n="pg_5t">Conclusão das caixilharias</strong>
+          <span data-i18n="pg_5d">4.º e último reforço · a 360 dias do CPCV</span>
+        </span>
       </li>
-      <li class="intervalo"><span data-i18n="pg_int5">mín. 90 dias</span></li>
       <li class="final">
         <span class="marco"></span>
         <span class="pct">50%</span>
@@ -669,8 +699,6 @@
         </span>
       </li>
     </ol>
-
-    <p class="plano-nota reveal" data-i18n="pg_nota">Condições sujeitas a confirmação em sede de contrato.</p>
   </div>
 </section>
 
@@ -682,14 +710,14 @@
     </div>
     <div style="max-width:760px">
       <details><summary data-i18n="faq_q1">Onde fica o Serpa Pinto 59?</summary><p data-i18n="faq_a1">O Serpa Pinto 59 está localizado na Rua de Serpa Pinto, 59, no Porto, perto da Casa da Música, da Rotunda da Boavista e da Avenida da Boavista, com metro a uma curta caminhada.</p></details>
-      <details><summary data-i18n="faq_q2">Que tipologias estão disponíveis?</summary><p data-i18n="faq_a2">Estão disponíveis 4 frações: um T3+1 duplex com jardim e piscina, um T2 com terraço e garagem, e dois T1 voltados à fachada principal (3.º e 4.º piso).</p></details>
+      <details><summary data-i18n="faq_q2">Que tipologias estão disponíveis?</summary><p data-i18n="faq_a2">Estão disponíveis 3 frações: um T3+1 duplex com jardim e piscina, um T2 com terraço e garagem, e um T1 voltado à fachada principal (3.º piso).</p></details>
       <details><summary data-i18n="faq_q10">Quando começa a construção?</summary><p data-i18n="faq_a10">O início da construção do Serpa Pinto 59 está previsto para setembro de 2026.</p></details>
       <details><summary data-i18n="faq_q11">Quando está prevista a conclusão?</summary><p data-i18n="faq_a11">A conclusão do empreendimento está prevista para 2028. As frações são comercializadas em planta, o que permite escolher entre as últimas unidades disponíveis.</p></details>
       <details><summary data-i18n="faq_q3">Qual o preço dos apartamentos?</summary><p data-i18n="faq_a3">As frações disponíveis têm preços desde 280.000€ (T1) até 1.450.000€ (T3+1 duplex com jardim e piscina).</p></details>
       <details><summary data-i18n="faq_q4">O empreendimento tem garagem?</summary><p data-i18n="faq_a4">A Fração A inclui 2 lugares de garagem e a Fração B tem garagem individual com acesso direto ao apartamento. Todas as frações incluem arrumos.</p></details>
       <details><summary data-i18n="faq_q5">Existe piscina?</summary><p data-i18n="faq_a5">Sim. A Fração A (T3+1 duplex) dispõe de piscina exterior privativa, integrada num logradouro de 503 m².</p></details>
       <details><summary data-i18n="faq_q6">Os apartamentos têm espaço exterior?</summary><p data-i18n="faq_a6">A Fração A tem 503 m² de logradouro privativo com piscina e a Fração B tem um terraço privativo de 28 m². Todas as frações beneficiam das floreiras integradas na fachada.</p></details>
-      <details><summary data-i18n="faq_q7">Quantas residências tem o empreendimento?</summary><p data-i18n="faq_a7">O Serpa Pinto 59 é composto por 19 frações habitacionais, das quais apenas 4 permanecem disponíveis.</p></details>
+      <details><summary data-i18n="faq_q7">Quantas residências tem o empreendimento?</summary><p data-i18n="faq_a7">O Serpa Pinto 59 é composto por 19 frações habitacionais, das quais apenas 3 permanecem disponíveis.</p></details>
       <details><summary data-i18n="faq_q9">Quem comercializa o Serpa Pinto 59?</summary><p data-i18n="faq_a9">A comercialização é assegurada pela Casa da Portela Imobiliária (AMI 10340), com acompanhamento especializado em todas as fases da aquisição.</p></details>
     </div>
   </div>
@@ -733,7 +761,7 @@
           <option value="Fração A">Fração A · T3+1 Duplex — 1.450.000€</option>
           <option value="Fração B">Fração B · T2 — 640.000€</option>
           <option value="Fração I">Fração I · T1 — 280.000€</option>
-          <option value="Fração L">Fração L · T1 — 285.000€</option>
+          <option value="Fração L">Fração L · T1 — Reservado</option>
         </select>
       </div>
       <div class="campo">
@@ -1007,7 +1035,7 @@
       hero_badge:"Porto · 19 residences",
       hero_eyebrow:"New residential development · Porto",
       hero_titulo:"A building that breathes",
-      hero_sub:"1 to 3+1-bedroom duplex apartments in central Porto. Contemporary architecture, hanging gardens and only 4 units remaining.",
+      hero_sub:"1 to 3+1-bedroom duplex apartments in central Porto. Contemporary architecture, hanging gardens and only 3 units remaining.",
       hero_preco:"From €280,000",
       hero_prazos:"Off-plan sale · Construction starts <b>September 2026</b> · Completion <b>2028</b>",
       hero_cta1:"Book a meeting",
@@ -1044,7 +1072,7 @@
       gal_p1:"Natural materials, abundant light and a fluid integration of kitchen and living room. Sophistication without ostentation; comfort without compromise.",
       fr_eyebrow:"Available units",
       fr_titulo:"The final opportunities",
-      fr_disp:"<b>19</b> residences · <b>15</b> reserved · <b>4</b> available",
+      fr_disp:"<b>19</b> residences · <b>16</b> reserved · <b>3</b> available",
       fr_prazos_t:"Off-plan sale",
       fr_prazos:"Construction scheduled to start in <b>September 2026</b> · Completion expected in <b>2028</b>",
       ct_prazos:"Off-plan development · Construction starts September 2026 · Completion expected 2028",
@@ -1062,6 +1090,7 @@
       fl_1:"52 m² gross area", fl_2:"Open views and privacy", fl_3:"Optional kitchen peninsula", fl_4:"Storage",
       card_visita:"Book a meeting", card_visita2:"Book a meeting", card_visita3:"Book a meeting", card_visita4:"Book a meeting",
       card_cta:"Request details", card_cta2:"Request details", card_cta3:"Request details", card_cta4:"Request details",
+      tag_reservada:"Reserved", fl_reservada:"Reserved",
       pg_eyebrow:"Payment terms",
       pg_titulo:"A phased plan, aligned with construction",
       pg_intro:"Payment follows construction progress: half spread across concrete building milestones, the remaining half on completion of the deed.",
@@ -1071,18 +1100,18 @@
       pg_int1:"min. 90 days", pg_int2:"min. 90 days", pg_int3:"min. 90 days",
       pg_int4:"min. 90 days", pg_int5:"min. 90 days",
       pg_1t:"Signing of the promissory contract (CPCV)", pg_1d:"Promissory purchase and sale agreement",
-      pg_2t:"Completion of the ground-floor slab", pg_2d:"If the slab is already complete at the time of purchase, the 90-day term still applies",
-      pg_3t:"Start of the roof slab",
-      pg_4t:"Completion of masonry",
-      pg_5t:"Completion of window frames",
+      pg_2t:"Completion of the ground-floor slab", pg_2d:"1st additional deposit · 90 days after the CPCV",
+      pg_3t:"Start of the roof slab", pg_3d:"2nd additional deposit · 180 days after the CPCV",
+      pg_4t:"Completion of masonry", pg_4d:"3rd additional deposit · 270 days after the CPCV",
+      pg_5t:"Completion of the window frames", pg_5d:"4th and final deposit · 360 days after the CPCV",
       pg_6t:"Deed", pg_6d:"Balance payable upon signing of the public deed",
-      pg_nota:"Terms subject to confirmation in the contract.",
+      pg_nota:"The terms (90, 180, 270 and 360 days) are counted from the signing of the CPCV and keep a minimum interval of 90 days between payments. If any stage is already complete at the time of purchase, the corresponding deposit falls due on the stated date. Terms subject to confirmation in the contract.",
       faq_eyebrow:"Frequently asked questions",
       faq_titulo:"Everything you need to know about Serpa Pinto 59",
       faq_q1:"Where is Serpa Pinto 59?",
       faq_a1:"Serpa Pinto 59 is located at Rua de Serpa Pinto 59, Porto, near Casa da Música, the Boavista roundabout and Avenida da Boavista, with the metro a short walk away.",
       faq_q2:"Which unit types are available?",
-      faq_a2:"Four units are available: a 3+1-bedroom duplex with garden and pool, a 2-bedroom apartment with terrace and garage, and two 1-bedroom apartments facing the main façade (3rd and 4th floors).",
+      faq_a2:"Three units are available: a 3+1-bedroom duplex with garden and pool, a 2-bedroom apartment with terrace and garage, and a 1-bedroom apartment facing the main façade (3rd floor).",
       faq_q3:"How much do the apartments cost?",
       faq_a3:"Available units are priced from €280,000 (1-bed) up to €1,450,000 (3+1-bed duplex with garden and pool).",
       faq_q4:"Is there parking?",
@@ -1092,7 +1121,7 @@
       faq_q6:"Do the apartments have outdoor space?",
       faq_a6:"Unit A has 503 m² of private grounds with a pool and Unit B has a 28 m² private terrace. All units benefit from the planters integrated into the façade.",
       faq_q7:"How many residences does the development have?",
-      faq_a7:"Serpa Pinto 59 comprises 19 residential units, of which only 4 remain available.",
+      faq_a7:"Serpa Pinto 59 comprises 19 residential units, of which only 3 remain available.",
       faq_q10:"When does construction start?",
       faq_a10:"Construction of Serpa Pinto 59 is scheduled to start in September 2026.",
       faq_q11:"When is completion expected?",
@@ -1189,12 +1218,12 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "Onde fica o Serpa Pinto 59?", "acceptedAnswer": { "@type": "Answer", "text": "O Serpa Pinto 59 está localizado na Rua de Serpa Pinto, 59, no Porto, perto da Casa da Música, da Rotunda da Boavista e da Avenida da Boavista, com metro a uma curta caminhada." } },
-    { "@type": "Question", "name": "Que tipologias estão disponíveis?", "acceptedAnswer": { "@type": "Answer", "text": "Estão disponíveis 4 frações: um T3+1 duplex com jardim e piscina, um T2 com terraço e garagem, e dois T1 voltados à fachada principal (3.º e 4.º piso)." } },
+    { "@type": "Question", "name": "Que tipologias estão disponíveis?", "acceptedAnswer": { "@type": "Answer", "text": "Estão disponíveis 3 frações: um T3+1 duplex com jardim e piscina, um T2 com terraço e garagem, e um T1 voltado à fachada principal (3.º piso)." } },
     { "@type": "Question", "name": "Qual o preço dos apartamentos?", "acceptedAnswer": { "@type": "Answer", "text": "As frações disponíveis têm preços desde 280.000€ (T1) até 1.450.000€ (T3+1 duplex com jardim e piscina)." } },
     { "@type": "Question", "name": "O empreendimento tem garagem?", "acceptedAnswer": { "@type": "Answer", "text": "A Fração A inclui 2 lugares de garagem e a Fração B tem garagem individual com acesso direto ao apartamento. Todas as frações incluem arrumos." } },
     { "@type": "Question", "name": "Existe piscina?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A Fração A (T3+1 duplex) dispõe de piscina exterior privativa, integrada num logradouro de 503 m²." } },
     { "@type": "Question", "name": "Os apartamentos têm espaço exterior?", "acceptedAnswer": { "@type": "Answer", "text": "A Fração A tem 503 m² de logradouro privativo com piscina e a Fração B tem um terraço privativo de 28 m². Todas as frações beneficiam das floreiras integradas na fachada." } },
-    { "@type": "Question", "name": "Quantas residências tem o empreendimento?", "acceptedAnswer": { "@type": "Answer", "text": "O Serpa Pinto 59 é composto por 19 frações habitacionais, das quais apenas 4 permanecem disponíveis." } },
+    { "@type": "Question", "name": "Quantas residências tem o empreendimento?", "acceptedAnswer": { "@type": "Answer", "text": "O Serpa Pinto 59 é composto por 19 frações habitacionais, das quais apenas 3 permanecem disponíveis." } },
     { "@type": "Question", "name": "Quando começa a construção?", "acceptedAnswer": { "@type": "Answer", "text": "O início da construção do Serpa Pinto 59 está previsto para setembro de 2026." } },
     { "@type": "Question", "name": "Quando está prevista a conclusão?", "acceptedAnswer": { "@type": "Answer", "text": "A conclusão do empreendimento está prevista para 2028. As frações são comercializadas em planta, o que permite escolher entre as últimas unidades disponíveis." } },
     { "@type": "Question", "name": "Quem comercializa o Serpa Pinto 59?", "acceptedAnswer": { "@type": "Answer", "text": "A comercialização é assegurada pela Casa da Portela Imobiliária (AMI 10340), com acompanhamento especializado em todas as fases da aquisição." } }
