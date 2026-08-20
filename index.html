@@ -744,7 +744,7 @@
       </div>
       <div class="campo">
         <label for="telefone" data-i18n="f_tel">Telefone</label>
-        <input id="telefone" name="telefone" type="tel" autocomplete="tel">
+        <input id="telefone" name="telefone" type="tel" required autocomplete="tel">
       </div>
       <div class="campo">
         <label for="assunto" data-i18n="f_assunto">Pretendo</label>
@@ -958,7 +958,7 @@
     ok.classList.remove('mostrar');
     erro.classList.remove('mostrar');
 
-    if (!form.nome.value.trim() || !form.email.checkValidity() || !form.rgpd.checked) {
+    if (!form.nome.value.trim() || !form.email.checkValidity() || !form.telefone.value.trim() || !form.rgpd.checked) {
       erro.classList.add('mostrar');
       return;
     }
